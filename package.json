@@ -1,0 +1,45 @@
+{
+  "name": "pouchdb-6809-replication-by-id",
+  "version": "0.0.0",
+  "description": "Sandbox to test PouchDB/CouchDB replication by ID",
+  "main": "index.js",
+  "scripts": {
+    "commitmsg": "validate-commit-msg",
+    "start": "node ./index.js",
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlvince/pouchdb-6809-replication-by-id.git"
+  },
+  "keywords": [
+    "pouchdb",
+    "pending",
+    "replication",
+    "sync"
+  ],
+  "author": "Tom Vincent <git@tlvince.com> (https://tlvince.com)",
+  "engines": {
+    "npm": ">=5.3",
+    "node": ">=8"
+  },
+  "bugs": {
+    "url": "https://github.com/tlvince/pouchdb-6809-replication-by-id/issues"
+  },
+  "homepage": "https://github.com/tlvince/pouchdb-6809-replication-by-id#readme",
+  "dependencies": {
+    "pouchdb-adapter-http": "6.4.3",
+    "pouchdb-adapter-memory": "6.4.3",
+    "pouchdb-core": "6.4.3",
+    "pouchdb-replication": "6.4.3"
+  },
+  "devDependencies": {
+    "husky": "0.14.3",
+    "standard": "10.0.3",
+    "validate-commit-msg": "2.14.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT"
+}
