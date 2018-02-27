@@ -27,20 +27,26 @@ const initRemote = async () => {
 ;(async () => {
   const remoteDb = await initRemote()
 
+  const keys = [
+    '1',
+    '2',
+    '3'
+  ]
+
   const opts = {
     batch_size: 1,
-    doc_ids: [
-      '1',
-      '2',
-      '3'
-    ]
+    selector: {
+      _id: {
+        $or: keys
+      }
+    }
   }
 
   await localDb.replicate.from(remoteDb, opts)
   const info = await localDb.info()
 
   try {
-    deepEqual(info.doc_count, opts.doc_ids.length)
+    deepEqual(info.doc_count, keys.length)
   } catch (e) {
     console.error(e)
   }
